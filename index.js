@@ -5,7 +5,7 @@ module.exports = function(app) {
   let plugin = {};
   let unsubscribes = [];
 
-  plugin.id = 'signalk-timezone-plugin';
+  plugin.id = 'signalk-gps-timezone';
   plugin.name = 'Signal K Timezone Plugin';
   plugin.description = 'Set the system timezone based on GPS coordinates';
 
@@ -22,6 +22,8 @@ module.exports = function(app) {
   };
 
   plugin.start = function(options, restartPlugin) {
+    if (!options.interval)
+      options.interval = 60;
     const updateInterval = options.interval * 60 * 1000; // Convert minutes to milliseconds
 
     const updateTimezone = () => {
