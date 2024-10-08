@@ -1,0 +1,16 @@
+{
+  "name": "signalk-timezone-plugin",
+  "version": "1.0.0",
+  "description": "Set the system timezone based on GPS coordinates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["signalk-node-server-plugin"],
+  "author": "Zach Hoeken",
+  "license": "ISC",
+  "dependencies": {
+    "tz-lookup": "^6.1.25"
+  },
+  "signalk-plugin-enabled-by-default": true
+}
