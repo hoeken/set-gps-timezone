@@ -75,8 +75,6 @@ module.exports = function(app) {
   };
 
   function setSystemTimezone(timezone, useSudo = true) {
-    console.log(`Updating timezone to: ${timezone}`);
-    
     //this is for our internal node.js timezone.
     process.env.TZ = timezone;
   
