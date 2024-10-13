@@ -5,7 +5,7 @@ module.exports = function(app) {
   let plugin = {};
   let unsubscribes = [];
 
-  plugin.id = 'signalk-gps-timezone';
+  plugin.id = 'signalk-set-gps-timezone';
   plugin.name = 'GPS Timezone Plugin';
   plugin.description = 'Set the system timezone based on GPS coordinates';
 
@@ -46,6 +46,7 @@ module.exports = function(app) {
           try {
             const currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
             //console.log('Current Timezone:', currentTimezone);
+            app.setPluginStatus(`Current Timezone: ${currentTimezone}`);
 
             const timezone = tzlookup(latitude, longitude);
             //console.log(`Detected timezone: ${timezone}`);
