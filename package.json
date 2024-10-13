@@ -1,8 +1,12 @@
 {
-  "name": "signalk-gps-timezone",
+  "name": "signalk-set-gps-timezone",
   "version": "1.0.0",
   "description": "Set the system timezone based on GPS coordinates",
   "main": "index.js",
+  "repository": {
+  	"type": "git",
+  	"url": "git+https://github.com/hoeken/set-gps-timezone.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
